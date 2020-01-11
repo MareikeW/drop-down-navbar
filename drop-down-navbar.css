@@ -1,0 +1,91 @@
+/* Problem bei "About", es verschiebt sich immer, wenn man auf Products kommt */
+
+@import url('https://fonts.googleapis.com/css?family=Cute+Font&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: red;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  position: relative;
+  height: 50px;
+  width: 60%;
+  background-color: yellow;
+}
+
+span {
+  color: white;
+}
+
+p {
+  font-family: 'Cute Font', cursive;
+  font-size: 70px;
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+ul > li {
+  display: flex;
+  padding-right: 150px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  float: left;
+  cursor: pointer;
+}
+
+nav ul ul {
+  margin-top: 5px;
+  /* makes it hidden when page loads */
+  display: none;
+  /* position set to default */
+  position: static;
+  height: auto;
+  width: 200px;
+  border: 1px solid #666666;
+  background-color: #dddddd;
+}
+
+nav ul ul li {
+  position: relative;
+  float: none;
+  display: block;
+  height: 50px;
+  width: 100%;
+  border: none;
+  background-color: white;
+}
+
+nav li:hover > ul {
+  display: block;
+  position: relative;
+  top: 50px;
+  right: 120px;
+}
+
+.about:hover > li {
+  display: block;
+  position: relative;
+  top: 50px;
+  right: 50px;
+}
+            
